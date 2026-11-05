@@ -1,3 +1,26 @@
-# Application properties that need to be
-# embedded within the web application can be included here
+cas:
+  server:
+    name: ${CAS_SERVER_NAME:https://localhost:8443}
+    prefix: ${cas.server.name}${server.servlet.context-path:/cas}
+  service-registry:
+    json:
+      location: classpath:/services
+  authn:
+    oidc:
+      core:
+        issuer: ${cas.server.prefix}/oidc
+      jwks:
+        file-system:
+          jwks-file: ${OIDC_JWKS_FILE:file:./oidc.jwks}
+    attribute-repository:
+      stub:
+        id: demo-stub
+        attributes:
+          name: CAS Demo User
+          given_name: CAS
+          family_name: Demo User
+          preferred_username: casuser
+          email: casuser@example.org
+          organization: Apereo
+          roles: user,demo
 

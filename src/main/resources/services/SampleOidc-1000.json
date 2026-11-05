@@ -1,0 +1,15 @@
+{
+  "@class": "org.apereo.cas.services.OidcRegisteredService",
+  "serviceId": "^http://localhost:8080/callback$",
+  "name": "SampleOidc",
+  "id": 1000,
+  "description": "Demo OIDC client with all resolved attributes released as claims",
+  "clientId": "gkAdTG19NhoayBT&pvlbNeCKK",
+  "clientSecret": "g@75cL404Mg2iqFc0DEBt5KvF",
+  "scopes": [ "java.util.HashSet", [ "openid" ] ],
+  "supportedGrantTypes": [ "java.util.HashSet", [ "authorization_code" ] ],
+  "supportedResponseTypes": [ "java.util.HashSet", [ "code" ] ],
+  "attributeReleasePolicy": {
+    "@class": "org.apereo.cas.services.ReturnAllAttributeReleasePolicy"
+  }
+}
