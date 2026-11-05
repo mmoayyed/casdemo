@@ -1,6 +1,6 @@
 cas:
   server:
-    name: ${CAS_SERVER_NAME:https://localhost:8443}
+    name: "https://cas-server-demo-ee954827885a.herokuapp.com"
     prefix: ${cas.server.name}${server.servlet.context-path:/cas}
   service-registry:
     json:
